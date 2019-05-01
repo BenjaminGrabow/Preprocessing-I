@@ -54,6 +54,46 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	width    : 100%;
+}
+
+// colors
+@primaryColor : #dddddd;
+@secondaryColor: #f6d55c;
+@tertiaryColor : #20639b;
+@black         : #173f5f;
+@white         : white;
+@green  : #3caea3;
+
+// base fontsizes
+@defaultFontSize: 62.5%;
+@mobileFontSize: 102.5%;
+
+// base font-family
+@Indie: 'Indie Flower', cursive;
+
+// general font-sizes
+@largeFontSize: 5rem;
+@middleLargeFontSize: 3.5rem;
+@mediumFontSize: 2.5rem;
+@smallFontSize: .5rem;
+
+// Breakpoints
+@mobileBreakPoint: 500px;
+
+// Border
+@border: .1rem solid #dddddd;;
+
+// Mixin
+.flex-line-between() {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+// general style
+:root {
+	font-size: @defaultFontSize;
 }
 
