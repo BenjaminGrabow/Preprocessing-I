@@ -200,16 +200,29 @@ body {
 .container .top-container p {
   font-family: 'Indie Flower', cursive;
   font-size: 3rem;
-  padding: 2rem 2rem;
+  padding: 2rem 0 0 2rem;
+}
+.container .top-container .top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .container .top-container a {
   font-family: 'Indie Flower', cursive;
   text-decoration: none;
   font-size: 2rem;
   color: #0c0d0e;
-  padding: 0.3rem 3rem;
+  padding: 0.3rem 4rem;
   border: 0.1rem solid #0c0d0e;
-  margin: 3rem 2rem;
+}
+.container .top-container .pc-skill {
+  height: 20%;
+  width: 20%;
+}
+@media (max-width: 500px) {
+  .container .top-container .pc-skill {
+    width: 40%;
+  }
 }
 .container .middle-container {
   display: flex;
