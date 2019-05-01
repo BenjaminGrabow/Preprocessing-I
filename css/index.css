@@ -185,17 +185,20 @@ body {
   }
 }
 .container .top-container h2 {
+  font-family: 'Indie Flower', cursive;
   font-size: 5rem;
   padding: 1rem 2rem;
 }
 .container .top-container h4 {
-  font-size: 3rem;
+  font-family: 'Indie Flower', cursive;
+  font-size: 4rem;
   padding: 1rem 2rem;
 }
 .container .top-container hr {
   margin: 0 2rem;
 }
 .container .top-container p {
+  font-family: 'Indie Flower', cursive;
   font-size: 3rem;
   padding: 2rem 2rem;
 }
@@ -203,10 +206,10 @@ body {
   font-family: 'Indie Flower', cursive;
   text-decoration: none;
   font-size: 2rem;
-  color: black;
+  color: #0c0d0e;
   padding: 0.3rem 3rem;
-  border: 0.1rem solid black;
-  margin: 30px 2rem;
+  border: 0.1rem solid #0c0d0e;
+  margin: 3rem 2rem;
 }
 .container .middle-container {
   display: flex;
@@ -224,18 +227,23 @@ body {
   width: 50%;
 }
 @media (max-width: 500px) {
-  .container .middle-container .secone,
-  .container .middle-container .sectwo {
+  .container .middle-container .secone {
     width: 80%;
+    padding: 1rem 0;
   }
 }
-.container .middle-container h4 {
-  font-size: 4.5rem;
+@media (max-width: 500px) {
+  .container .middle-container .sectwo {
+    padding-top: 1rem;
+    width: 100%;
+  }
 }
 .container .middle-container p {
+  font-family: 'Indie Flower', cursive;
   font-size: 3rem;
 }
 .container .middle-container h4 {
+  font-family: 'Indie Flower', cursive;
   font-size: 4rem;
 }
 .container .middle-container .box div {
@@ -245,6 +253,7 @@ body {
   padding: 1rem 0;
 }
 .container .bottom-container h4 {
+  font-family: 'Indie Flower', cursive;
   font-size: 4rem;
 }
 @media (max-width: 500px) {
@@ -253,14 +262,14 @@ body {
   }
 }
 .container .bottom-container table {
+  font-family: 'Indie Flower', cursive;
   border-collapse: collapse;
   width: 100%;
 }
 @media (max-width: 500px) {
   .container .bottom-container table {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 }
 .container .bottom-container td,
@@ -274,6 +283,7 @@ body {
   background-color: #dddddd;
 }
 .container footer h4 {
+  font-family: 'Indie Flower', cursive;
   font-size: 4rem;
 }
 @media (max-width: 500px) {
@@ -282,6 +292,7 @@ body {
   }
 }
 .container footer p {
+  font-family: 'Indie Flower', cursive;
   font-size: 2rem;
 }
 @media (max-width: 500px) {
@@ -291,6 +302,7 @@ body {
   }
 }
 .container footer .copyright {
+  font-family: 'Indie Flower', cursive;
   margin-top: 2.5rem;
   font-size: 3rem;
   background-color: #dddddd;
@@ -298,14 +310,6 @@ body {
 }
 @media (max-width: 500px) {
   .container footer .copyright {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto 0 auto;
   }
-}
-.container h2,
-.container h4,
-.container p,
-.container a,
-.container table {
-  font-family: 'Indie Flower', cursive;
 }
