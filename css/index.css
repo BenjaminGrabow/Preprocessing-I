@@ -138,3 +138,155 @@ body {
 :root {
   font-size: 62.5%;
 }
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container header nav {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.container header a {
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: 'Indie Flower', cursive;
+  color: grey;
+  padding: 1rem 0;
+}
+@media (max-width: 500px) {
+  .container header a {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #dddddd;
+  }
+}
+.container .top-container {
+  background-color: #dddddd;
+  padding: 2rem 2rem;
+}
+@media (max-width: 500px) {
+  .container .top-container {
+    text-align: center;
+  }
+}
+.container .top-container img {
+  width: 35%;
+  padding: 2rem;
+}
+@media (max-width: 500px) {
+  .container .top-container img {
+    width: 60%;
+  }
+}
+.container .top-container h2 {
+  font-size: 5rem;
+  padding: 1rem 2rem;
+}
+.container .top-container h4 {
+  font-size: 3rem;
+  padding: 1rem 2rem;
+}
+.container .top-container hr {
+  margin: 0 2rem;
+}
+.container .top-container p {
+  font-size: 3rem;
+  padding: 2rem 2rem;
+}
+.container .top-container a {
+  font-family: 'Indie Flower', cursive;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  padding: 0.3rem 3rem;
+  border: 0.1rem solid black;
+  margin: 30px 2rem;
+}
+.container .middle-container {
+  display: flex;
+  padding: 1rem 0;
+}
+@media (max-width: 500px) {
+  .container .middle-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.container .middle-container .secone,
+.container .middle-container .sectwo {
+  width: 50%;
+}
+.container .middle-container h4 {
+  font-size: 4.5rem;
+}
+.container .middle-container p {
+  font-size: 3rem;
+}
+.container .middle-container h4 {
+  font-size: 4rem;
+}
+.container .middle-container .box div {
+  border: 0.1rem solid #dddddd;
+}
+.container .bottom-container {
+  padding: 1rem 0;
+}
+.container .bottom-container h4 {
+  font-size: 4rem;
+}
+@media (max-width: 500px) {
+  .container .bottom-container h4 {
+    text-align: center;
+  }
+}
+.container .bottom-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .bottom-container td,
+.container .bottom-container th {
+  border: 0.1rem solid #dddddd;
+  text-align: left;
+  padding: 0.8rem;
+  font-size: 2rem;
+}
+.container .bottom-container tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.container footer h4 {
+  font-size: 4rem;
+}
+@media (max-width: 500px) {
+  .container footer h4 {
+    text-align: center;
+  }
+}
+.container footer p {
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .container footer p {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+.container footer .copyright {
+  margin-top: 2.5rem;
+  font-size: 3rem;
+  background-color: #dddddd;
+  text-align: center;
+}
+.container h2,
+.container h4,
+.container p,
+.container a,
+.container table {
+  font-family: 'Indie Flower', cursive;
+}

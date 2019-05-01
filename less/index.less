@@ -59,7 +59,7 @@ html, body {
 }
 
 // colors
-@primaryColor : #dddddd;
+@grey : #dddddd;
 @secondaryColor: #f6d55c;
 @tertiaryColor : #20639b;
 @black         : #173f5f;
@@ -92,8 +92,194 @@ html, body {
   justify-content: space-between;
 }
 
+.border() {
+	border: 0.1rem solid #dddddd;
+}
+
+.flex() {
+	display: flex;
+}
+
+.center() {
+	text-align: center;
+}
+
 // general style
 :root {
 	font-size: @defaultFontSize;
 }
 
+.container {
+	max-width: 900px;
+	margin   : 0 auto;
+
+	header {
+		nav {
+			.flex;
+			justify-content: space-between;
+
+			@media(max-width: 500px) {
+				flex-direction: column;
+				.center;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			font-size      : 4rem;
+			font-family    : @Indie;
+			color          : grey;
+			padding        : 1rem 0;
+
+			@media (max-width: 500px) {
+				border-top   : 1px solid;
+				border-bottom: 1px solid;
+				border-color : @grey;
+			}
+		}
+	}
+
+	.top-container {
+		background-color: @grey;
+		padding         : 2rem 2rem;
+
+		@media(max-width: 500px) {
+			.center;
+		}
+
+		img {
+			width  : 35%;
+			padding: 2rem;
+
+			@media(max-width: 500px) {
+				width: 60%;
+			}
+		}
+
+		h2 {
+			font-size: 5rem;
+			padding  : 1rem 2rem;
+		}
+
+		h4 {
+			font-size: 3rem;
+			padding  : 1rem 2rem;
+		}
+
+		hr {
+			margin: 0 2rem;
+		}
+
+		p {
+			font-size: 3rem;
+			padding  : 2rem 2rem;
+		}
+
+		a {
+			font-family    : @Indie;
+			text-decoration: none;
+			font-size      : 2rem;
+			color          : black;
+			padding        : 0.3rem 3rem;
+			border         : 0.1rem solid black;
+			margin         : 30px 2rem;
+		}
+	}
+
+	.middle-container {
+		.flex;
+		padding: 1rem 0;
+
+		@media(max-width: 500px) {
+			flex-direction: column;
+			align-items   : center;
+			.center();
+		}
+
+		.secone,
+		.sectwo {
+			width: 50%;
+		}
+
+		h4 {
+			font-size: 4.5rem;
+		}
+
+		p {
+			font-size: 3rem;
+		}
+
+		h4 {
+			font-size: 4rem;
+		}
+
+		.box div {
+			.border;
+		}
+	}
+
+	.bottom-container {
+		padding: 1rem 0;
+
+		h4 {
+			font-size: 4rem;
+
+			@media(max-width: 500px) {
+				.center;
+			}
+		}
+
+		table {
+			border-collapse: collapse;
+			width          : 100%;
+		}
+
+		td,
+		th {
+			.border;
+			text-align: left;
+			padding   : 0.8rem;
+			font-size : 2rem;
+		}
+
+		tr:nth-child(even) {
+			background-color: @grey;
+		}
+	}
+
+	footer {
+
+
+		h4 {
+			font-size: 4rem;
+
+			@media(max-width: 500px) {
+				.center;
+			}
+		}
+
+		p {
+			font-size: 2rem;
+
+			@media(max-width: 500px) {
+				.center;
+				font-size: 3rem;
+			}
+		}
+
+		.copyright {
+			margin-top      : 2.5rem;
+			font-size       : 3rem;
+			background-color: @grey;
+			.center;
+		}
+	}
+
+	h2,
+	h4,
+	p,
+	a,
+	table {
+		font-family: @Indie;
+	}
+}
