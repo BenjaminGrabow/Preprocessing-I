@@ -4,56 +4,321 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,
+em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,
+u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,
+caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,
+embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,
+section,summary,time,mark,audio,video {
+	margin        : 0;
+	padding       : 0;
+	border        : 0;
+	font-size     : 100%;
+	font          : inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing : 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+	width : 100%;
 }
 
+// colors
+@grey  : #dddddd;
+@black : #0c0d0e;
+
+// base fontsizes
+@defaultFontSize: 62.5%;
+
+// base font-family
+@Indie: 'Indie Flower', cursive;
+
+// general font-sizes
+@largeFontSize      : 5rem;
+@middleLargeFontSize: 4rem;
+@mediumFontSize     : 3rem;
+@smallFontSize      : 2rem;
+
+// Breakpoints
+@mobileBreakPoint: 500px;
+
+// Border
+@border     : .1rem solid #dddddd;
+@borderBlack: .1rem solid @black;
+
+// Mixin
+
+.flex() {
+	display: flex;
+}
+
+.center() {
+	text-align: center;
+}
+
+// general style
+:root {
+	font-size: @defaultFontSize;
+}
+
+.container {
+	max-width: 900px;
+	margin   : 0 auto;
+
+	header {
+		nav {
+			.flex;
+			justify-content: space-between;
+
+			@media(max-width: @mobileBreakPoint) {
+				flex-direction: column;
+				.center;
+			}
+		}
+
+		a {
+			font-family    : @Indie;
+			text-decoration: none;
+			font-size      : @middleLargeFontSize;
+			font-family    : @Indie;
+			color          : grey;
+			padding        : 1rem 0;
+
+			@media (max-width: 500px) {
+				border-top   : 1px solid;
+				border-bottom: 1px solid;
+				border-color : @grey;
+			}
+		}
+	}
+
+	.top-container {
+		background-color: @grey;
+		padding         : 2rem 2rem;
+
+		@media(max-width: @mobileBreakPoint) {
+			.center;
+		}
+
+		img {
+			width  : 35%;
+			padding: 2rem;
+
+			@media(max-width: @mobileBreakPoint) {
+				width: 60%;
+			}
+		}
+
+
+		h2 {
+			font-family: @Indie;
+			font-size  : @largeFontSize;
+			padding    : 1rem 2rem;
+		}
+
+		h4 {
+			font-family: @Indie;
+			font-size  : @middleLargeFontSize;
+			padding    : 1rem 2rem;
+		}
+
+		hr {
+			margin: 0 2rem;
+		}
+
+		p {
+			font-family: @Indie;
+			font-size  : @mediumFontSize;
+			padding    : 2rem 0 0 2rem;
+		}
+
+		.top-section {
+			.flex;
+			align-items    : center;
+			justify-content: space-around;
+		}
+
+		a {
+			font-family    : @Indie;
+			text-decoration: none;
+			font-size      : @smallFontSize;
+			color          : @black ;
+			padding        : 0.3rem 4rem;
+			border         : @borderBlack;
+
+		}
+
+		.pc-skill {
+			height: 20%;
+			width : 20%;
+
+			@media(max-width: @mobileBreakPoint) {
+				width: 40%;
+			}
+		}
+	}
+
+	.middle-container {
+		.flex;
+		padding: 1rem 0;
+
+		@media(max-width: @mobileBreakPoint) {
+			flex-direction: column;
+			align-items   : center;
+			.center();
+		}
+
+		.secone,
+		.sectwo {
+			width: 50%;
+		}
+
+		.secone {
+			@media(max-width: @mobileBreakPoint) {
+				width  : 80%;
+				padding: 1rem 0;
+			}
+		}
+
+		.sectwo {
+			@media(max-width: @mobileBreakPoint) {
+				padding-top: 1rem;
+				width      : 100%;
+			}
+		}
+
+		p {
+			font-family: @Indie;
+			font-size  : @mediumFontSize;
+		}
+
+		h4 {
+			font-family: @Indie;
+			font-size  : @middleLargeFontSize;
+		}
+
+		.box div {
+			border: @border;
+		}
+	}
+
+	.bottom-container {
+		padding: 1rem 0;
+
+		h4 {
+			font-family: @Indie;
+			font-size  : @middleLargeFontSize;
+
+			@media(max-width: @mobileBreakPoint) {
+				.center;
+			}
+		}
+
+		table {
+			font-family    : @Indie;
+			border-collapse: collapse;
+			width          : 100%;
+
+			@media(max-width: @mobileBreakPoint) {
+				width : 80%;
+				margin: 0 auto;
+			}
+		}
+
+		td,
+		th {
+			border    : @border;
+			text-align: left;
+			padding   : 0.8rem;
+			font-size : @smallFontSize;
+		}
+
+		tr:nth-child(even) {
+			background-color: @grey;
+		}
+	}
+
+	footer {
+
+
+		h4 {
+			font-family: @Indie;
+			font-size  : @middleLargeFontSize;
+
+			@media(max-width: @mobileBreakPoint) {
+				.center;
+			}
+		}
+
+		p {
+			font-family: @Indie;
+			font-size  : @smallFontSize;
+
+			@media(max-width: @mobileBreakPoint) {
+				.center;
+				font-size: @mediumFontSize;
+			}
+		}
+
+		.copyright {
+			font-family     : @Indie;
+			margin-top      : 2.5rem;
+			font-size       : @mediumFontSize;
+			background-color: @grey;
+			.center;
+
+			@media(max-width: @mobileBreakPoint) {
+				margin: 1rem auto 0 auto;
+			}
+		}
+	}
+}

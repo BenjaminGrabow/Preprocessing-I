@@ -1,1 +1,328 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+:root {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container header nav {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.container header a {
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: 'Indie Flower', cursive;
+  color: grey;
+  padding: 1rem 0;
+}
+@media (max-width: 500px) {
+  .container header a {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #dddddd;
+  }
+}
+.container .top-container {
+  background-color: #dddddd;
+  padding: 2rem 2rem;
+}
+@media (max-width: 500px) {
+  .container .top-container {
+    text-align: center;
+  }
+}
+.container .top-container img {
+  width: 35%;
+  padding: 2rem;
+}
+@media (max-width: 500px) {
+  .container .top-container img {
+    width: 60%;
+  }
+}
+.container .top-container h2 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 5rem;
+  padding: 1rem 2rem;
+}
+.container .top-container h4 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 4rem;
+  padding: 1rem 2rem;
+}
+.container .top-container hr {
+  margin: 0 2rem;
+}
+.container .top-container p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 3rem;
+  padding: 2rem 0 0 2rem;
+}
+.container .top-container .top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .top-container a {
+  font-family: 'Indie Flower', cursive;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #0c0d0e;
+  padding: 0.3rem 4rem;
+  border: 0.1rem solid #0c0d0e;
+}
+.container .top-container .pc-skill {
+  height: 20%;
+  width: 20%;
+}
+@media (max-width: 500px) {
+  .container .top-container .pc-skill {
+    width: 40%;
+  }
+}
+.container .middle-container {
+  display: flex;
+  padding: 1rem 0;
+}
+@media (max-width: 500px) {
+  .container .middle-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.container .middle-container .secone,
+.container .middle-container .sectwo {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .container .middle-container .secone {
+    width: 80%;
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 500px) {
+  .container .middle-container .sectwo {
+    padding-top: 1rem;
+    width: 100%;
+  }
+}
+.container .middle-container p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 3rem;
+}
+.container .middle-container h4 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 4rem;
+}
+.container .middle-container .box div {
+  border: 0.1rem solid #dddddd;
+}
+.container .bottom-container {
+  padding: 1rem 0;
+}
+.container .bottom-container h4 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 4rem;
+}
+@media (max-width: 500px) {
+  .container .bottom-container h4 {
+    text-align: center;
+  }
+}
+.container .bottom-container table {
+  font-family: 'Indie Flower', cursive;
+  border-collapse: collapse;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container .bottom-container table {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.container .bottom-container td,
+.container .bottom-container th {
+  border: 0.1rem solid #dddddd;
+  text-align: left;
+  padding: 0.8rem;
+  font-size: 2rem;
+}
+.container .bottom-container tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.container footer h4 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 4rem;
+}
+@media (max-width: 500px) {
+  .container footer h4 {
+    text-align: center;
+  }
+}
+.container footer p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .container footer p {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+.container footer .copyright {
+  font-family: 'Indie Flower', cursive;
+  margin-top: 2.5rem;
+  font-size: 3rem;
+  background-color: #dddddd;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container footer .copyright {
+    margin: 1rem auto 0 auto;
+  }
+}
